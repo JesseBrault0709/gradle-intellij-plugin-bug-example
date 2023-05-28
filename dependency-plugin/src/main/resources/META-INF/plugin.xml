@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<idea-plugin>
+    <id>com.jessebrault.dependency-plugin</id>
+    <name>A Dependency for the Base Project</name>
+    <vendor url="https://jessebrault.com" email="jbrault@mac.com">Jesse Brault</vendor>
+    <description><![CDATA[Provides functionality import to the base plugin.]]></description>
+    <depends>com.intellij.modules.platform</depends>
+</idea-plugin>
