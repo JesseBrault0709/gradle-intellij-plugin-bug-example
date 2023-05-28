@@ -13,7 +13,15 @@ repositories {
 intellij {
     version.set("2023.1.2")
     type.set("IC")
-    plugins.add(file("dependency-plugin/build/idea-sandbox/plugins/dependency-plugin"))
+
+    // according to the documentation at:
+    // https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin-faq.html#how-to-add-a-dependency-on-a-plugin-available-in-the-file-system
+    // the following should work, but does not:
+
+    plugins.add(file("dependency-plugin/build/idea-sandbox/plugins/dependency-plugin/lib"))
+
+    // however, the following does work, and I'm not sure why:
+    // plugins.add(file("dependency-plugin/build/idea-sandbox/plugins/dependency-plugin"))
 }
 
 tasks {
