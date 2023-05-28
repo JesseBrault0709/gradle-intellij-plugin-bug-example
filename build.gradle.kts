@@ -1,6 +1,6 @@
 plugins {
     id("java")
-    id("org.jetbrains.intellij").version("1.13.3")
+    id("org.jetbrains.intellij")
 }
 
 group = "com.jessebrault"
@@ -13,8 +13,6 @@ repositories {
 intellij {
     version.set("2023.1.2")
     type.set("IC")
-    // Neither of the following work:
-    // plugins.add(file("dependency-plugin/build/idea-sandbox/plugins/dependency-plugin/lib"))
     plugins.add(file("dependency-plugin/build/idea-sandbox/plugins/dependency-plugin"))
 }
 
